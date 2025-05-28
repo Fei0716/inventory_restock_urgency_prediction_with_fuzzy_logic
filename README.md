@@ -30,10 +30,6 @@ To run the urgency prediction, send a **`GET`** request to:
 
 http://localhost:8080/predict
 
-yaml
-Copy
-Edit
-
 ---
 
 ### 📨 Input Format (JSON Body)
