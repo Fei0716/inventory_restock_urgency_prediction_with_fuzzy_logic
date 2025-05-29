@@ -11,7 +11,7 @@ This project uses **Fuzzy Logic** to determine the urgency of restocking invento
 3. Start the backend server by running:
 
     ```bash
-    python run_fis_api.py
+    python fis_api.py
     ```
 
 4. The server will be running locally at:
@@ -26,7 +26,7 @@ This project uses **Fuzzy Logic** to determine the urgency of restocking invento
 
 ### ▶️ Endpoint
 
-To run the urgency prediction, send a **`GET`** request to:
+To run the urgency prediction, send a **`POST`** request to:
 
 http://localhost:8080/predict
 
