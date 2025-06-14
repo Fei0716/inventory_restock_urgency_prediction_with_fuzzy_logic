@@ -45,7 +45,7 @@ def predict_restock_urgency(data: ProductListInput):
                     output
                 )
                 membership[label] = round(degree, 4)
-
+                print(f"label: {label}, degree: {degree}")
             responses.append({
                 "restock_urgency": round(output, 2),
                 "membership": membership

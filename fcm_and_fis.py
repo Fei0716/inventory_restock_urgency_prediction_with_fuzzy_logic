@@ -304,7 +304,6 @@ rule5 = ctrl.Rule(sales['Fast'] & stock['High'], urgency['Medium'])
 rule6 = ctrl.Rule(sales['Fast'] & stock['Low'] & lead['Long'] & price['Low'], urgency['High'])
 rule7 = ctrl.Rule(sales['Normal'] & stock['Medium'] & lead['Short'] & price['High'], urgency['Medium'])
 rule8 = ctrl.Rule(sales['Slow'] & stock['High'] & lead['Long'] & price['Medium'], urgency['Low'])  # fixed
-
 #top up rules
 # Low sales, low stock, long lead — still can be medium urgency
 rule9 = ctrl.Rule(sales['Slow'] & stock['Low'] & lead['Long'], urgency['Medium'])
