@@ -1,6 +1,7 @@
 # 🧠 Inventory Restock Urgency Prediction with Fuzzy Logic
 
 This project uses **Fuzzy Logic** to determine the urgency of restocking inventory based on real-world parameters such as sales, stock level, lead time, and price.
+![ui](https://github.com/user-attachments/assets/6e0f7713-efde-4a04-9bab-899f725f0e70)
 
 ---
 
