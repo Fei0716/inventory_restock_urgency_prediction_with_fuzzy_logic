@@ -1,0 +1,16 @@
+Month,Product_ID,Sales_Speed,Stock_Level,Category,Lead_Time,Price
+2023-08,P0020,382,181,Electronics,17,81.04
+2023-09,P0005,376,155,Electronics,17,71.76
+2023-09,P0016,301,389,Electronics,17,23.5
+2023-10,P0002,437,120,Electronics,17,98.37
+2023-10,P0003,354,267,Electronics,17,32.63
+2023-11,P0019,377,364,Electronics,17,95.1
+2023-12,P0009,413,198,Electronics,17,33.63
+2023-12,P0015,402,275,Electronics,17,35.61
+2023-12,P0016,352,332,Electronics,17,88.15
+2024-01,P0001,11,138,Electronics,17,42.34
+2024-01,P0007,13,53,Electronics,17,27.45
+2024-01,P0013,16,472,Electronics,17,90.89
+2024-01,P0014,11,342,Electronics,17,73.4
+2024-01,P0018,11,151,Electronics,17,29.45
+2024-01,P0019,12,409,Electronics,17,62

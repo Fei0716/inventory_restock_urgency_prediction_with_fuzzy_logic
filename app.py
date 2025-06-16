@@ -46,7 +46,8 @@ if uploaded_file is not None:
     try:
         # Read the CSV file
         df = pd.read_csv(uploaded_file)
-
+        df.index = df.index + 1
+        modified_df = df.drop(columns=["Category"])
         # Store the dataframe for later processing
         st.session_state.current_uploaded_df = df
 
@@ -56,7 +57,7 @@ if uploaded_file is not None:
         with col1:
             # Display the uploaded data preview in the first column
             st.subheader("📊 Uploaded Data Preview")
-            st.dataframe(df) # Use fixed height for scrolling
+            st.dataframe(modified_df) # Use fixed height for scrolling
         with col2:
 
             # --- Prediction Results section (within the left column) ---
@@ -66,6 +67,8 @@ if uploaded_file is not None:
             if 'last_prediction_results' in st.session_state and st.session_state.last_prediction_results:
                  try:
                      results_df = pd.DataFrame(st.session_state.last_prediction_results)
+                     results_df.index = results_df.index + 1
+
                      # Create two columns inside col1 for side-by-side layout
                      pred_col1, pred_col2 = st.columns([1.5, 1.5])  # 2:1 ratio for table and chart
                      with pred_col1:
@@ -315,7 +318,7 @@ if uploaded_file is not None:
             history_df["Timestamp"] = pd.to_datetime(history_df["Timestamp"]).dt.strftime("%Y-%m-%d %H:%M:%S")
             history_df["Restock_Urgency"] = history_df["Restock_Urgency"].round(2)
             history_df["Price"] = history_df["Price"].round(2)
-
+            history_df.index = history_df.index + 1
             # Apply styling to highlight Urgency_level
             def highlight_urgency(val):
                 color_map = {
@@ -362,6 +365,8 @@ else:
         history_df["Timestamp"] = pd.to_datetime(history_df["Timestamp"]).dt.strftime("%Y-%m-%d %H:%M:%S")
         history_df["Restock_Urgency"] = history_df["Restock_Urgency"].round(2)
         history_df["Price"] = history_df["Price"].round(2)
+        history_df.index = history_df.index + 1
+
 
         # Apply styling to highlight Urgency_level
         def highlight_urgency(val):
